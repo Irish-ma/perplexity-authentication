@@ -1,29 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-black text-white">
+<html lang="en" class="bg-[#0d0d0d] text-white">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Discord Bots</title>
+  <title>Perplexify | Discord Bot Experts</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    .typewriter {
+      overflow: hidden;
+      border-right: 2px solid #22c55e;
+      white-space: nowrap;
+      animation: typing 4s steps(30, end) infinite alternate,
+                 blink 0.75s step-end infinite;
+      display: inline-block;
+    }
+  </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-8">
-  <div class="max-w-4xl w-full text-center">
-    <h1 class="text-4xl font-bold">
-      Custom <span class="text-green-500">Discord Bots</span> Made Easy
-    </h1>
-    <p class="mt-4 text-gray-400">
-      We build powerful, tailored Discord bots for your community. Join our rapidly expanding client base using our custom bot solutions.
-    </p>
-    <div class="mt-8">
-      <a href="https://auth.perplexify.xyz/login" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition">
-        Order Today →
+<body class="min-h-screen flex items-center justify-center p-6">
+
+  <div class="max-w-6xl w-full space-y-20">
+    
+    <!-- Hero Section -->
+    <section class="text-center space-y-6">
+      <h1 class="text-4xl sm:text-6xl font-bold leading-tight">
+        <span class="text-green-500">Perplexify</span><br />
+        <span class="typewriter text-white text-2xl sm:text-3xl">Building Custom Discord Bots.</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">
+        Expertly crafted bots for moderation, automation, and creativity. Fully secure and scalable for any server.
+      </p>
+      <a href="https://discord.gg/YOUR_INVITE_CODE"
+         class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium text-lg py-3 px-6 rounded-xl shadow transition">
+        🚀 Join Our Discord
       </a>
-    </div>
-    <div class="mt-12 flex justify-center gap-10 text-green-500 font-semibold text-xl">
-      <div><p class="text-3xl">20,000+</p><p class="text-gray-400 text-sm">Robux Handled</p></div>
-      <div><p class="text-3xl">47+</p><p class="text-gray-400 text-sm">Clients</p></div>
-      <div><p class="text-3xl">4.9</p><p class="text-gray-400 text-sm">Client Rating</p></div>
-    </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="grid sm:grid-cols-3 gap-6 text-center">
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow border border-[#222]">
+        <p class="text-3xl font-bold text-green-400">20,000+</p>
+        <p class="text-gray-400 mt-1">Robux Handled</p>
+      </div>
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow border border-[#222]">
+        <p class="text-3xl font-bold text-green-400">47+</p>
+        <p class="text-gray-400 mt-1">Clients Served</p>
+      </div>
+      <div class="bg-[#1a1a1a] p-6 rounded-xl shadow border border-[#222]">
+        <p class="text-3xl font-bold text-green-400">4.9★</p>
+        <p class="text-gray-400 mt-1">Average Rating</p>
+      </div>
+    </section>
+
+    <!-- Code Examples -->
+    <section class="grid sm:grid-cols-3 gap-6 text-sm font-mono text-green-300">
+      <div class="bg-[#111111] p-4 rounded-lg border border-gray-700">
+        <code>@bot.command()<br>async def hello(ctx):<br>&nbsp;&nbsp;&nbsp;&nbsp;await ctx.send("Hi!")</code>
+      </div>
+      <div class="bg-[#111111] p-4 rounded-lg border border-gray-700">
+        <code>@bot.event<br>async def on_ready():<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Bot online!")</code>
+      </div>
+      <div class="bg-[#111111] p-4 rounded-lg border border-gray-700">
+        <code>embed = discord.Embed(<br>&nbsp;&nbsp;&nbsp;&nbsp;title="Server Stats",<br>&nbsp;&nbsp;&nbsp;&nbsp;color=0x00ff00<br>)</code>
+      </div>
+    </section>
+
   </div>
+
 </body>
 </html>
